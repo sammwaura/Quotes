@@ -8,7 +8,8 @@
 
 <ul>
   <div *ngFor='let quote of quotes'>
-  <li >{{quote.name}}</li>
-  <app-quote-details [quote]='quote'></app-quote-details>
+  <li id="{{i}}" >{{quote.name}}  post on {{quote.postDate|date|uppercase}}</li>
+  
+  <app-quote-details *ngIf="quote.showDescription"[quote]='quote' (isPost)='deleteQuote ($event,i)' ></app-quote-details>
   </div>
 </ul>

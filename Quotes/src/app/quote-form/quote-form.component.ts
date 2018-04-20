@@ -7,7 +7,7 @@ import {Quotes} from '../quotes';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  newQuote=new quotes (0,"","",new Date());
+  newQuote=new Quotes (0,"","",new Date());
 
   constructor() { }
 
