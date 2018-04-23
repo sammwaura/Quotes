@@ -14,9 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quotes(3,'All empires are created of blood and fire.','by Pablo Escobar',new Date(2018,4,20)),
   ]
 
-
-
-
+    toogleDetails(index){
+        this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    }
 
         addNewQuote(quote) {
           let quoteLength = this.quotes.length;
@@ -26,7 +26,7 @@ export class QuoteComponent implements OnInit {
 
         }
 
-        
+
       deleteQuote(isPost,index){
         if (isPost){
             let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
