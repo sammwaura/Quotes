@@ -1,4 +1,5 @@
 export class Quotes {
+  name: any;
   splice(arg0: any, arg1: any): any {
     throw new Error("Method not implemented.");
   }

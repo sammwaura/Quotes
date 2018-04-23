@@ -38,7 +38,12 @@
 
             </div>
         </div>
-        <button type="Submit" class="btn btn-success" >Add Quote</button>
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+
+        
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <button type="submit" class="btn btn-success" >Add Quote</button>
               </form>
-  </div>
+            </form>
+           </div>
 </div>
