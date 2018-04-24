@@ -18,9 +18,9 @@
         <app-quote-details [quotes]='quote' (deleteComplete)='deleteQuote($event,i)'></app-quote-details>
       </div>
 
-      <button class="btn btn-info" (click)="UpVote()">
+      <button class="btn btn-info" (click)="upVote(i)">
         <i class="arrow up icon"></i>Upvote</button>{{quotes.upvotes}}
-      <button class="btn btn-info" (click)="DownVote()">
+      <button class="btn btn-info" (click)="downVote(i)">
         <i class="arrow down icon"></i>Downvote</button>{{quotes.downvotes}}
 
     </div>
