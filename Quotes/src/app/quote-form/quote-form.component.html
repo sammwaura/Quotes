@@ -5,7 +5,7 @@
       <div class="form-group">
         <label for="name">Quote</label>
 
-        <input type="text" class="form-control-lg" id="name" placeholder="Quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
+        <input type="text" class="form-control-lg" id="name" placeholder="Quote" rows="4" [(ngModel)]="newQuote.quotes" name="quotes" #quote="ngModel" required>
 
         <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
           <!-- <p>Quote is required</p> -->
