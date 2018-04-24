@@ -1,16 +1,31 @@
+<div class="jumbotron">
 <h1> Hella Quotes!</h1>
-<div class="container">
-  <div class="row">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  </div>
 </div>
 <hr>
+  <div class="container-fluid">
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+ 
+<hr>
 
-<ul>
+
   <div *ngFor='let quote of quotes'>
   <li id="{{i}}" >{{quote.name}}  post on {{quote.postDate|date|uppercase}}</li>
-  <button (click)='toogleDetails(i)'>Toogle Details</button>
   
-  <app-quote-details *ngIf="quote.showDescription"[quote]='quote' (isPost)='deleteQuote ($event,i)' ></app-quote-details>
+  <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+  
+  <div class="row"  *ngIf="quote.showDescription">
+  <app-quote-details [quotes]='quote' (isPost)='deleteQuote ($event,i)'></app-quote-details> 
+</div>
+
+  <button class="btn btn-info" (click)="UpVote()">Upvote</button>{{votes}}
+  <button class="btn btn-info" (click)="DownVote()">Downvote</button>
+
+      </div>
+
+    </div>
+
   </div>
-</ul>
+<p *ngIf='quotes.length>5'>You have too many legit quotes</p>
+
+
