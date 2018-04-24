@@ -10,6 +10,7 @@ body{
     padding: 3em;
     font-family: 'Raleway', 'Arial';
     font-size: large;
+    font-style: initial;
     color:greenyellow;
 }
     ul

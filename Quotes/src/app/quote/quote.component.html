@@ -1,31 +1,31 @@
 <div class="jumbotron">
-<h1> Hella Quotes!</h1>
+  <h1> Hella Quotes!</h1>
 </div>
 <hr>
-  <div class="container-fluid">
+<div class="container-fluid">
   <div class="row">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
- 
-<hr>
+
+    <hr>
 
 
-  <div *ngFor='let quote of quotes'>
-  <li id="{{i}}" >{{quote.name}}  post on {{quote.postDate|date|uppercase}}</li>
-  
-  <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
-  
-  <div class="row"  *ngIf="quote.showDescription">
-  <app-quote-details [quotes]='quote' (isPost)='deleteQuote ($event,i)'></app-quote-details> 
-</div>
+    <div *ngFor='let quote of quotes; let i=index'>
+      <li id="{{i}}">{{quote.name}} post on {{quote.postDate|date|uppercase}}</li>
 
-  <button class="btn btn-info" (click)="UpVote()">Upvote</button>{{votes}}
-  <button class="btn btn-info" (click)="DownVote()">Downvote</button>
+      <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
 
+      <div class="row" *ngIf="quote.showDescription">
+        <app-quote-details [quotes]='quote' (deleteComplete)='deleteQuote($event,i)'></app-quote-details>
       </div>
+
+      <button class="btn btn-info" (click)="UpVote()">
+        <i class="arrow up icon"></i>Upvote</button>{{quotes.upvotes}}
+      <button class="btn btn-info" (click)="DownVote()">
+        <i class="arrow down icon"></i>Downvote</button>{{quotes.downvotes}}
 
     </div>
 
   </div>
+
+</div>
 <p *ngIf='quotes.length>5'>You have too many legit quotes</p>
-
-

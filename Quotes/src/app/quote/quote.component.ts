@@ -8,6 +8,7 @@ import {Quotes} from '../quotes'
 })
 export class QuoteComponent implements OnInit {
   @Input() quote=Quotes;
+  
   quotes = [
     new Quotes(1,'Lightning makes no sound until it strikes', 'by Martin Luther King Jr',new Date(2018,3,20) ),
     new Quotes(2,'Technique is not being able to juggle a ball 1000 times.Technique is passing the ball with one touch, with the right speed, at the right foot of your team mate.','by Johann Cruff',new Date(2018,4,19)),
@@ -47,11 +48,11 @@ export class QuoteComponent implements OnInit {
         this.Adding = !this.Adding
       }
       UpVote() {
-        this.votes += 1;
+        this.quote[0].upvotes ++;
       }
     
       DownVote() {
-        this.votes -= 1;
+        this.quote[0].downvotes ++;
       }
 
   

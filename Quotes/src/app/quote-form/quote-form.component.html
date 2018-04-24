@@ -1,38 +1,26 @@
 <div class="container-fluid">
   <div class="row">
-      
-      <!-- Name Form -->
-      <div class="form-group">
-
-        <label for="name">Author</label>
-        <input type="text" class="form-control-sm" id="name" placeholder="Author" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
-
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          <!-- <p>Name is Required</p> -->
-        </div>
-      </div>
-
-      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>   
       <!-- Quote Input -->
       <div class="form-group">
         <label for="name">Quote</label>
 
-        <input type="text" class="form-control-lg" id="quote" placeholder="Quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
+        <input type="text" class="form-control-lg" id="name" placeholder="Quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
 
         <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
           <!-- <p>Quote is required</p> -->
         </div>
       </div>
 
+      <!-- Author -->
+    <div class="form-group">
+      <label for="name">Author</label>
+      <input type="text" class="form-control-sm" id="name" placeholder="Author" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required> 
+  </div>
       <!-- Date Input -->
       <div class="form-group">
-        <label for="complete">Postdate</label>
-        <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
-
-        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-          <!-- <p> Complete Date is Required</p> -->
-
-        </div>
+        <label for="post">Postdate</label>
+        <input type='date' id="post" [(ngModel)]="newQuote.postDate" name="postDate" #postDate="ngModel" required>
       </div>
 
       
