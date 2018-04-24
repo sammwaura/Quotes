@@ -1,3 +1,8 @@
+##BY MWAURASAMUEL
+
+This is a web app for quotes where the user can input the quote and author.
+The User can also like or unliike the quote.
+
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
