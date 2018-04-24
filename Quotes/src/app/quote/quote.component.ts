@@ -47,12 +47,12 @@ export class QuoteComponent implements OnInit {
       AddQuote() {
         this.Adding = !this.Adding
       }
-      UpVote() {
-        this.quote[0].upvotes ++;
+      UpVote(index) {
+        this.quotes[0].upvotes ++;
       }
     
-      DownVote() {
-        this.quote[0].downvotes ++;
+      DownVote(index) {
+        this.quotes[0].downvotes ++;
       }
 
   

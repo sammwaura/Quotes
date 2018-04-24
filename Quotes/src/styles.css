@@ -11,10 +11,17 @@ body{
     font-family: 'Raleway', 'Arial';
     font-size: large;
     font-style: initial;
-    color:greenyellow;
+    color:darkgray;
 }
     ul
  {
     list-style-type: none;
     margin-right: 30px;
+}
+.headHeight{
+    line-height: 10em;
+    text-align: center;
+    color: gray;
+    background-color: black;
+    background-image: url("/.assets/3d.jpeg")
 }
