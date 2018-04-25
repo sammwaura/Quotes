@@ -15,16 +15,16 @@ The User can also like or unliike the quote.
 
 
 
-##LiveSite
+## LiveSite
 
 https://sammwaura.github.io/Quotes/
 
-##Technologies Used
+## Technologies Used
 
 Angular Javascript
 Html
 Css
 
-##Contact Details
+## Contact Details
 
 Contact me @sammwaura 0740116783
